@@ -1,7 +1,15 @@
-# 如何在Windows 10上安装Tensorflow(GPU版)
+[如何在Windows 10上安装Tensorflow(GPU版)][]
+===================
 
-#### 安装目标
+[![BSD License][bsdlicense-button]][bsdlicense]
+[![Code of Conduct][codeofconduct-button]][Code of Conduct]
 
+[bsdlicense-button]: http://img.shields.io/badge/license-BSD-yellow.svg
+[bsdlicense]: http://opensource.org/licenses/BSD-3-Clause
+[codeofconduct-button]: https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-green.svg?style=flat-square
+[Code of Conduct]: https://github.com/Python-Markdown/markdown/blob/master/CODE_OF_CONDUCT.md
+
+安装目标
 -------------
 
 如果安装过程顺利，你将获得如下环境：
@@ -13,17 +21,15 @@
 - Python 3.6.4
 - Keras
 
+安装顺序
+-------
 
-
-#### 安装顺序
--------------
+你可以参考我们的安装顺序来避免可能遇到的麻烦。
 
 
 1. 安装Python 3.6.4
 
    [Python 3.6.4 安装包](https://www.python.org/downloads/release/python-364/) - 在Python官网下载3.6.4的安装包。在安装的最后一步不要忘记将Python加入到系统环境变量中。
-
-   ​
 
 2. 修改pip源
 
@@ -35,8 +41,6 @@
    [install]
    trusted-host=mirrors.aliyun.com
    ```
-
-   ​
 
 3. 安装CUDA
 
@@ -58,8 +62,6 @@
 
      ![CUDA Family](/imgs/cuda_family.PNG)
 
-     ​
-
 4. 通过pip安装Tensorflow GPU版
 
    Tensorflow在2018年1月底发布了[1.5.0](https://github.com/tensorflow/tensorflow/releases/tag/v1.5.0)版并且宣布自1.6版起将支持AVX instructions。在1.5.0版中，如果我们直接通过pip install tensorflow来安装，会遇到依赖库*futures*版本不匹配的情况。我们需要先安装对应的*futures*版本。
@@ -74,15 +76,11 @@
    pip install tensorflow-gpu==1.5.0
    ```
 
-   ​
-
 5. 安装Keras
 
    ```
    pip install keras
    ```
-
-   ​
 
 6. 测试安装结果
 
@@ -90,11 +88,7 @@
 
    ![test.py](/imgs/test_tf_keras.PNG)
 
-
-
-
-#### 文末推荐
-
+文末推荐
 -------------
 
 - [Cmder](https://github.com/cmderdev/cmder)： Lovely console emulator package for Windows
