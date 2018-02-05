@@ -1,6 +1,7 @@
 # 如何在Windows 10上安装Tensorflow(GPU版)
 
-#### 安装目标
+> #### 安装目标
+>
 
 如果安装过程顺利，你将获得如下环境：
 
@@ -14,9 +15,8 @@
 
 
 
-
-
-#### 安装顺序
+> #### 安装顺序
+>
 
 1. 安装Python 3.6.4
 
@@ -92,8 +92,7 @@
 
 
 
-
-
-#### 文末推荐
+> #### 文末推荐
+>
 
 - [Cmder](https://github.com/cmderdev/cmder)： Lovely console emulator package for Windows
