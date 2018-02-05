@@ -14,6 +14,8 @@
 
 
 
+
+
 #### 安装顺序
 
 1. 安装Python 3.6.4
@@ -75,9 +77,9 @@
 
 5. 安装Keras
 
-  ```
-  pip install keras
-  ```
+   ```
+   pip install keras
+   ```
 
    ​
 
@@ -86,6 +88,8 @@
    [test.py](/sources/test.py) - 你可以下载这个简单的脚本来测试你的Tensorflow环境是否安装成功。
 
    ![test.py](/imgs/test_tf_keras.PNG)
+
+
 
 
 
