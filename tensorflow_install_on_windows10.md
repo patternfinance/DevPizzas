@@ -1,4 +1,4 @@
-[如何在Windows 10上安装Tensorflow(GPU版)][]
+如何在Windows 10上安装Tensorflow(GPU版)
 ===================
 
 [![BSD License][bsdlicense-button]][bsdlicense]
