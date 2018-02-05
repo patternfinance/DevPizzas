@@ -13,6 +13,7 @@
 
 
 
+
 #### 安装顺序
 
 1. 安装Python 3.6.4
@@ -38,7 +39,7 @@
 
    - 安装Visual Studio 2015 Community Edition
 
-     [Torrent](ed2k://|file|en_visual_studio_community_2015_with_update_3_x86_x64_dvd_8923300.iso|7617847296|AC962389EB54AF93431568804CB10875|/) - 在国内可以选择[itellyou.cn](http://msdn.itellyou.cn/)的torrent来下载VS 2015社区版(免费)。在安装时只需勾选Visual C++部分。
+     [Torrent](/sources/vs2015ce_torrent.txt) - 在国内可以选择[itellyou.cn](http://msdn.itellyou.cn/)的torrent来下载VS 2015社区版(免费)。在安装时只需勾选Visual C++部分。
 
      ![Visual Studio 2015 Community Edition](/imgs/vs2015ce.PNG)
 
@@ -85,6 +86,7 @@
    [test.py](/sources/test.py) - 你可以下载这个简单的脚本来测试你的Tensorflow环境是否安装成功。
 
    ![test.py](/imgs/test_tf_keras.PNG)
+
 
 
 
