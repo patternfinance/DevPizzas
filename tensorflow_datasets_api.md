@@ -23,5 +23,5 @@
 文末推荐
 -------------
 
-- [Cmder](https://github.com/cmderdev/cmder)： Lovely console emulator package for Windows
+- [Cmder](https://github.com/cmderdev/cmder): Lovely console emulator package for Windows
 - [PFFI](https://github.com/patternfinance/PFFI): Pattern Finance Factor Investing
