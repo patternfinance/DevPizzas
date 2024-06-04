@@ -1,0 +1,61 @@
+########################################################################
+# Setup cache-server VM (Ubuntu Server 22.04)
+########################################################################
+1. Set root password
+> sudo passwd root
+
+2. Enable SSH login
+> sudo vim /etc/ssh/sshd_config
+# edit PermitRootLogin -> yes
+> sudo systemctl restart sshd
+
+3. Disable auto-sleep
+> systemctl status sleep.target # sleep loaded
+> sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+> sudo systemctl set-default multi-user.target
+> systemctl status sleep.target # sleep masked
+> sudo vim /etc/systemd/logind.conf
+# edit IdleAction=ignore
+# edit IdleActionSec=0
+> sudo systemctl restart systemd-logind.service
+
+4. Install miniconda
+> wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+> sh Miniconda3-latest-Linux-x86_64.sh
+> source ~/.bashrc
+
+5. Setup cache-server conda env
+> conda create -n cache-server
+> conda activate cache-server
+> conda config --set ssl_verify false
+> conda install python==3.11.8
+> conda install pip pandas fastapi uvicorn
+
+6. Change pip source
+> pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+> pip config set install.trusted-host pypi.tuna.tsinghua.edu.cn
+
+7. Install nodejs and pm2
+> sudo apt update
+> curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+> apt-get install nodejs -y # npm will be installed
+> sudo npm install pm2 -g
+
+8. Git sparse checkout cache-server folder
+> git init patternfinance
+> cd patternfinance
+> git remote add origin https://github.com/patternfinance/patternfinance.git
+> git config core.sparsecheckout true
+> echo "/cache-server/" >> .git/info/sparse-checkout
+> git config --global credential.helper store
+
+# pull latest code
+> git pull origin main
+
+9. Config firewall to allow port access
+> ufw allow 8848/tcp
+> ufw enable
+> ufw status # check configuration
+
+10. Install other dependencies
+> pip3 install python-multipart
